@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ProductFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_product_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_section" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_product_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_section" />
+
+            <TextView
+                android:id="@+id/tv_product_condition_and_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_layout"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nuevo  |  94 vendidos " />
+
+            <TextView
+                android:id="@+id/tv_product_title"
+                style="@style/TextView.Title.H1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_widget"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_condition_and_quantity"
+                tools:text="Smart Tv Samsung Series 4 Un32j4290agczb Led Hd 32 ''" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_widget"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_title" />
+
+            <TextView
+                android:id="@+id/tv_product_original_price"
+                style="@style/TextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/view_pager_slider"
+                tools:text="$193.999" />
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                style="@style/TextView.Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_original_price"
+                app:layout_goneMarginTop="@dimen/margin_section"
+                tools:text="$ 280.999" />
+
+            <TextView
+                android:id="@+id/tv_product_off_label"
+                style="@style/TextView.GreenTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_widget"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_product_price"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_price"
+                app:layout_constraintTop_toTopOf="@+id/tv_product_price"
+                tools:text="15% OFF" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_price_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tv_product_off_label, tv_product_original_price"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_product_free_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                android:src="@drawable/ic_free_shipping"
+                app:layout_constraintStart_toEndOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_off_label" />
+
+            <TextView
+                android:id="@+id/tv_product_free_shipping"
+                style="@style/TextView.GreenTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_widget"
+                android:text="@string/product_free_shipping"
+                app:layout_constraintBottom_toBottomOf="@+id/img_product_free_shipping"
+                app:layout_constraintStart_toEndOf="@+id/img_product_free_shipping"
+                app:layout_constraintTop_toTopOf="@+id/img_product_free_shipping" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_free_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="img_product_free_shipping, tv_product_free_shipping"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_product_warranty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                android:src="@drawable/ic_warranty"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_free_shipping"
+                app:layout_goneMarginTop="@dimen/margin_section"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_product_warranty"
+                style="@style/TextView.GreenTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_widget"
+                android:textColor="@color/grey_9191"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/img_product_warranty"
+                app:layout_constraintStart_toEndOf="@+id/img_product_warranty"
+                app:layout_constraintTop_toTopOf="@+id/img_product_warranty"
+                tools:text="Garantía de fábrica 12 meses"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_warranty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="img_product_warranty, tv_product_warranty"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_product_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/available_stock"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/view_product_quantity"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_warranty"
+                app:layout_goneMarginTop="@dimen/margin_section"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/view_product_quantity"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_grey_box"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_product_quantity_label"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toTopOf="@+id/tv_product_quantity_label" />
+
+            <TextView
+                android:id="@+id/tv_product_quantity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_widget"
+                android:layout_marginTop="@dimen/margin_section"
+                android:paddingVertical="@dimen/margin_vertical_tv_background"
+                android:text="@string/quantity_label"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_stock" />
+
+            <TextView
+                android:id="@+id/tv_product_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_widget"
+                android:paddingVertical="@dimen/margin_widget"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_product_quantity_label"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_quantity_label"
+                app:layout_constraintTop_toTopOf="@+id/tv_product_quantity_label" />
+
+            <TextView
+                android:id="@+id/tv_product_available_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:paddingVertical="@dimen/margin_widget"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_product_quantity_label"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_quantity"
+                app:layout_constraintTop_toTopOf="@+id/tv_product_quantity_label"
+                tools:text="(67 disponibles)" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_quantity_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tv_product_stock, view_product_quantity, tv_product_quantity, tv_product_quantity_label"
+                tools:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/btn_buy_product"
+                style="@style/Button.Primary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                android:paddingVertical="@dimen/margin_vertical_button"
+                android:text="@string/buy_product_now"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_quantity_label"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                style="@style/Button.Secondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/margin_vertical_button"
+                android:text="@string/add_to_cart"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/btn_buy_product"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_products_attributes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_section"
+                android:layout_marginBottom="@dimen/margin_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_product_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_product_start"
+                app:layout_constraintTop_toBottomOf="@+id/btn_add_to_cart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/product_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

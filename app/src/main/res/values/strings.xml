@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Search</string>
+
+    <string name="query_hint">Buscar en Mercado Libre</string>
+    <string name="product_percentage_off">%d%% OFF</string>
+    <string name="product_price">$ %s</string>
+    <string name="cuotas">Hasta %d cuotas sin interés</string>
+    <string name="free_shipping">Envío gratis</string>
+    <string name="deal_of_the_day">OFERTA DEL DÍA</string>
+    <string name="best_seller_candidate">MÁS VENDIDO</string>
+    <string name="no_results">No se encontraron productos para tu búsqueda</string>
+    <string name="error_message">¡Uy! Algo salió mal</string>
+    <string name="retry_button">Reintentar</string>
+    <string name="empty_message">Busca los productos que necesitas</string>
+    <string name="available_stock">Stock disponible</string>
+    <string name="buy_product_now">Comprar ahora</string>
+    <string name="add_to_cart">Agregar al carrito</string>
+    <string name="quantity_label">Cantidad:</string>
+    <string name="product_new">Nuevo</string>
+    <string name="product_used">Usado</string>
+    <string name="product_free_shipping">Llega gratis a tu domicilio</string>
+    <string name="product_condition_quantity">%s   |   %d vendidos</string>
+    <string name="product_original_price">$ %s</string>
+    <string name="product_available_quantity">(%d disponible)</string>
+</resources>

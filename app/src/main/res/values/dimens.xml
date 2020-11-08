@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_elevation">6dp</dimen>
+    <dimen name="padding_vertical_search_view">8dp</dimen>
+    <dimen name="product_image_size_search">100dp</dimen>
+    <dimen name="margin_widget">6dp</dimen>
+    <dimen name="margin_section">16dp</dimen>
+    <dimen name="margin_layout">18dp</dimen>
+    <dimen name="margin_vertical_button">10dp</dimen>
+    <dimen name="margin_vertical_tv_background">13dp</dimen>
+</resources>

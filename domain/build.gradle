@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //Dagger
+    implementation 'com.google.dagger:dagger-android:2.20'
+
+    //rx
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //Testing
+    implementation 'junit:junit:4.13.1'
+    testImplementation 'org.mockito:mockito-core:3.5.13'
+    testImplementation 'org.mockito:mockito-inline:3.4.0'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
+}
