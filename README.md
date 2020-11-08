@@ -8,7 +8,7 @@ resultado de la búsqueda y otra pantalla donde se muestra el detalle
 de los productos, además hae uso de Clean Architecture.
 
 ## Screenshoots
-<img src="https://github.com/gimartinez17/MercadoLibreSearch/blob/master/preview/capture.png">
+<img src="https://github.com/gimartinez17/mercado-libre-search-app/blob/master/preview/capture.png">
 
 ## Arquitectura
 La arquitectura de este proyecto sigue los principios básicos de Clean
